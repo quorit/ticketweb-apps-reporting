@@ -1,7 +1,7 @@
 // const { defineConfig } = require('@vue/cli-service')
 const path = require("path")
-
-const config_data = JSON.parse(process.env.VUE_APP_CONFIG_DATA);
+const j5 = require("json5")
+const config_data = j5.parse(process.env.VUE_APP_CONFIG_DATA);
 
 
 

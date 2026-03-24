@@ -48,8 +48,8 @@
 const authsystem_network = require ("authsystem_network");
 import {get_error_params} from './js_extra/web_project_error.js'
 
-
-const config_data = JSON.parse(process.env.VUE_APP_CONFIG_DATA);
+import j5 from "json5";
+const config_data = j5.parse(process.env.VUE_APP_CONFIG_DATA);
 
 const authsystem_path = config_data.vue_app_path_roots.authsystem;
 

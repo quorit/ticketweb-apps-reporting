@@ -1,5 +1,9 @@
 #!/bin/bash
 
+printf '%q ' "$0" "$@"
+echo ""
+
+
 usage()
 {
   echo "Usage: ticketweb-frontend <venv_root> { build | serve }"
@@ -22,11 +26,11 @@ ticketweb_venv_root="$1"
 mode="$2"
 
 
-cat $ticketweb_venv_root/etc/ticketweb/applications/reporting/frontend-config.json
+cat $ticketweb_venv_root/etc/ticketweb/applications/reporting/frontend-config.json5
 
 
 
-VUE_APP_CONFIG_DATA=$(cat $ticketweb_venv_root/etc/ticketweb/applications/reporting/frontend-config.json) 
+VUE_APP_CONFIG_DATA=$(cat $ticketweb_venv_root/etc/ticketweb/applications/reporting/frontend-config.json5) 
 export VUE_APP_CONFIG_DATA
 
 

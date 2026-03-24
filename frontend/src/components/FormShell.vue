@@ -99,7 +99,10 @@ const rt_network = require ("rt_network");
 import {FormValidationError} from '../js_extra/web_project_error.js'
 import ErrorDiv from './ErrorDiv.vue'
 
-const config_data = JSON.parse(process.env.VUE_APP_CONFIG_DATA);
+
+import j5 from 'json5'
+const config_data = j5.parse(process.env.VUE_APP_CONFIG_DATA);
+
 
 const authsystem_path = config_data.vue_app_path_roots.authsystem;
 const app_server_path = config_data.vue_app_path_roots.app_server;
