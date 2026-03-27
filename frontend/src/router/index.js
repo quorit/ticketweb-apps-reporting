@@ -8,7 +8,7 @@ import ErrorPage from '../views/ErrorPage.vue'
 const authsystem_network = require ("authsystem_network");
 import {get_error_params} from '../js_extra/web_project_error.js'
 import store from '../store'
-import j5 from 'json5'
+
 
 
 
@@ -110,7 +110,7 @@ async function generateCodeChallenge(verifier) {
 
 
 
-const config_data = j5.parse(process.env.VUE_APP_CONFIG_DATA);
+const config_data = JSON.parse(process.env.VUE_APP_CONFIG_DATA);
 
 
 

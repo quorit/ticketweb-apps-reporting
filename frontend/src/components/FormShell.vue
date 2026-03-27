@@ -100,8 +100,7 @@ import {FormValidationError} from '../js_extra/web_project_error.js'
 import ErrorDiv from './ErrorDiv.vue'
 
 
-import j5 from 'json5'
-const config_data = j5.parse(process.env.VUE_APP_CONFIG_DATA);
+const config_data = JSON.parse(process.env.VUE_APP_CONFIG_DATA);
 
 
 const authsystem_path = config_data.vue_app_path_roots.authsystem;

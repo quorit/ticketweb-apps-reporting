@@ -26,11 +26,13 @@ ticketweb_venv_root="$1"
 mode="$2"
 
 
-cat $ticketweb_venv_root/etc/ticketweb/applications/reporting/frontend-config.json5
+config_file="$ticketweb_venv_root/etc/ticketweb/applications/reporting/frontend-config.json5"
+echo $config_file
 
 
+VUE_APP_CONFIG_DATA=$(python3 -m json5 --as-json "$config_file" | jq -c .)
 
-VUE_APP_CONFIG_DATA=$(cat $ticketweb_venv_root/etc/ticketweb/applications/reporting/frontend-config.json5) 
+
 export VUE_APP_CONFIG_DATA
 
 
